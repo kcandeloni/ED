@@ -124,7 +124,7 @@ int main(void) {
     }
     
     printf("\n\n\t------ Estado Inicial ------");
-    imprimePilha(); /* Imprime a torre de hanoi antes de começar a moimentar os discos */
+    imprimePilha(); /* Imprime a torre de hanoi antes de começar a movimentar os discos */
 	moveDiscos(pilhaA, pilhaC, pilhaB, nDiscos); /* Chama a função que realizara os movimentos dos discos */
     
     printf("\n\nFree\tTorre A\tTorre B\tTorre C");
