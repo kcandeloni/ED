@@ -127,12 +127,13 @@ Lista* removeChave(Lista* l, int v){
 /* Funcao recursiva que retorna o maior elemnto de uma lista */
 int maiorElemento(Lista* l, int mChave){
 	
-	if(l==NULL) return mChave;
-	
-	if(mChave > l->info) maiorElemento(l->prox, mChave);
-
-	else maiorElemento(l->prox, l->info);
-
+	if(l==NULL) return mChave; /* Retorna o maior elemento */
+	if(mChave > l->info) maiorElemento(l->prox, mChave); /* Se o elemento 
+	presente na lista é menor que o mChave(atual maior), chama a função 
+	mandando mChave */
+	else maiorElemento(l->prox, l->info); /* o elemento presente na lisa é
+	maior que o atual maior, chama a função mandando o elemento da lista,
+	tornando esse o atual maior */
 }
 
 Lista* inverteLista(Lista *l){
@@ -204,12 +205,9 @@ int main(void) {
     lst_imprime(l);
     
 	if(find(l,"25"))printf("\n7) A chave '25' esta pesente na lista\n");
-    else printf("\n7)A chave '25' nao esta presente na lista!");
+    else printf("\n7)A chave '25' nao esta presente na lista!\n");
     
 	limpaMem(l);
     
 	return 0;
 }
-
-
-
